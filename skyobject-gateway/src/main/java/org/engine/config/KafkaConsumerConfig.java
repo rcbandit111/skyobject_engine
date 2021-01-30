@@ -33,7 +33,7 @@ public class KafkaConsumerConfig {
     }
 
     @Bean
-    public ProducerFactory<String, Object> saleResponseFactoryProducerFactory() {
+    public ProducerFactory<String, Object> responseFactoryProducerFactory() {
         Map<String, Object> configProps = new HashMap<>();
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
@@ -45,13 +45,13 @@ public class KafkaConsumerConfig {
     public ConcurrentKafkaListenerContainerFactory<String, Object> kafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, Object> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
-        factory.setReplyTemplate(saleResponseFactoryKafkaTemplate());
+        factory.setReplyTemplate(responseFactoryKafkaTemplate());
         return factory;
     }
 
     @Bean
-    public KafkaTemplate<String, Object> saleResponseFactoryKafkaTemplate() {
-        return new KafkaTemplate<>(saleResponseFactoryProducerFactory());
+    public KafkaTemplate<String, Object> responseFactoryKafkaTemplate() {
+        return new KafkaTemplate<>(responseFactoryProducerFactory());
     }
 
 }

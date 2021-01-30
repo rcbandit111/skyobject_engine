@@ -66,7 +66,7 @@ public class CheckoutController {
 
 
         AuthResponseFactory value = (AuthResponseFactory) consumerRecord.value();
-        System.out.println("\n !!!!!!!!!!!! " + value.getUnique_id());
+        System.out.println("\n !!!!!!!!!!!! authorize " + value.getUnique_id());
 
 
     }
