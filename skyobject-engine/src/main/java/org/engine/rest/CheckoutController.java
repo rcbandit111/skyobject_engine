@@ -48,7 +48,7 @@ public class CheckoutController {
 
 
         SaleResponseFactory value = (SaleResponseFactory) consumerRecord.value();
-        System.out.println("!!!!!!!!!!!! " + value.getUnique_id());
+        System.out.println("\n !!!!!!!!!!!! sale " + value.getUnique_id());
 
 
     }
@@ -66,7 +66,7 @@ public class CheckoutController {
 
 
         AuthResponseFactory value = (AuthResponseFactory) consumerRecord.value();
-        System.out.println("!!!!!!!!!!!! " + value.getUnique_id());
+        System.out.println("\n !!!!!!!!!!!! " + value.getUnique_id());
 
 
     }

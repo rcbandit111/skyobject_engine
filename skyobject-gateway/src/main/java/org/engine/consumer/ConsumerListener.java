@@ -23,7 +23,7 @@ public class ConsumerListener {
 		System.out.println("In AuthRequestFactoryListener: " + authRequestFactory);
 
 		AuthResponseFactory resObj = new AuthResponseFactory();
-		resObj.setUnique_id("123123");
+		resObj.setUnique_id("123123 auh");
 
 		return resObj;
 	}
@@ -34,7 +34,7 @@ public class ConsumerListener {
 		System.out.println("In SaleRequestFactoryListener: " + saleRequestFactory);
 
 		SaleResponseFactory resObj = new SaleResponseFactory();
-		resObj.setUnique_id("123123");
+		resObj.setUnique_id("123123 sale");
 
 		return resObj;
 	}
