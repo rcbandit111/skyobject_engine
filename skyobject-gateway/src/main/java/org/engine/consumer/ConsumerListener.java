@@ -12,7 +12,7 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Component;
 
 @Component
-@KafkaListener(id = "so65866763", topics = "tp-sale.request")
+@KafkaListener(id = "tp-sale.request", topics = "tp-sale.request")
 public class ConsumerListener {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(ConsumerListener.class);
@@ -38,16 +38,4 @@ public class ConsumerListener {
 
 		return resObj;
 	}
-
-//	@KafkaListener(topics = "tp-sale.request")
-//	@SendTo("tp-sale.reply")
-//	public SaleResponseFactory transactionElavonAuthorizeProcess(@Payload SaleRequestFactory tf, @Headers MessageHeaders headers) throws Exception {
-//
-//		System.out.println(tf.getId());
-//
-//		SaleResponseFactory resObj = new SaleResponseFactory();
-//		resObj.setUnique_id("123123");
-//
-//		return resObj;
-//	}
 }
